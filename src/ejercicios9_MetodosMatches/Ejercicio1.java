@@ -13,20 +13,21 @@ public class Ejercicio1 {
 		
 		// 2. que la cadena sea de tres letras, mayúsculas o minúsculas.
 		System.out.println("2º");
-		System.out.println();
-		System.out.println();
+		System.out.println("AbC".matches("[a-zA-Z][a-zA-Z][a-zA-Z]"));
+		System.out.println("ABCD".matches("[a-zA-Z][a-zA-Z][a-zA-Z]"));
 		System.out.println("=========================\n");
 		
 		// 3. que la cadena contenga 5 o más caracteres que no sean la ñ, la z ni la x.
 		System.out.println("3º");
-		System.out.println();
-		System.out.println();
+		System.out.println("abcde".matches("[a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]]"));
+		System.out.println("abñzx".matches("[a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]]"));
+		System.out.println("abcd".matches("[a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]][a-z&&[^ñzx]]"));
 		System.out.println("=========================\n");
 		
 		// 4. que la cadena no empiece con un número.
 		System.out.println("4º");
-		System.out.println();
-		System.out.println();
+		System.out.println("a".matches("^\\D"));
+		System.out.println("1".matches("^\\D"));
 		System.out.println("=========================\n");		
 		
 		// 5. que la cadena tenga varios caracteres excepto la b.
